@@ -1,0 +1,166 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  font-family: Arial, sans-serif;
+}
+
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area: main; }
+aside { grid-area: aside; }
+footer { grid-area: footer; }
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'main main main main aside aside'
+    'footer footer footer footer footer footer';
+  grid-gap: 1rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("bilder/banner.jpg");
+  background-size: 100% auto;
+  max-width: 100%;
+  height: 200px;
+}
+
+header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: 1.5em;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+nav {
+  width: 100%;
+  height: 3em;
+  background-color: #EFEFF0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a:link, nav a:visited {
+  text-decoration: none;
+  width: 10%;
+  height: 100%;
+  background-color: #D5CAD6;
+  color: #000;
+  font-variant: small-caps;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover, nav a:active {
+  background-color: #EFEFF0;
+}
+
+main {
+  /*background-color: #D5CAD6;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main article {
+  max-width: 30%;
+}
+
+main article img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+main article button a {
+  text-decoration: none;
+  color: #000;
+}
+
+aside {
+  /*background-color: #EFEFF0;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #000;
+  padding-left: 1em;
+}
+
+aside article {
+  max-height: 30%;
+}
+
+aside article ul li {
+  list-style-type: none;
+}
+
+aside article ul {
+  padding-left: 0px;
+}
+
+aside article ul li a:link, aside article ul li a:visited {
+  text-decoration: none;
+  width: 100%;
+  height: 2rem;
+  background-color: #FFF;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+aside article ul li a:hover {
+  background-color: #D5CAD6;
+}
+
+aside article ul li a:active {
+  background-color: #EFEFF0;
+}
+
+#btnGithub a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer {
+  height: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6B5E62;
+  color: #FFF;
+}
+
+/*-------------------------------Artikkel--------------------------------------*/
+
+.artikkelArticle {
+  max-width: 100%;
+}
+
+.artikkelAside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1em;
+}
